@@ -1,0 +1,202 @@
+:root {
+    /* couleurs */
+    --rose : #b47b77;
+    --rosepoudre : #FCDEDC;
+    --rose25 : #b47b7746;
+    --rose50 : #b47b777d;
+    --mauve : #c4a6e7;
+    --rouge : #800040;
+    --orange : #f88e55;
+    --jaune : #F5CA52;
+    --bleu : #058b8c;
+    --bleuciel : #77B5FE;
+    --vert : #70a38d;
+    --noir : #2a2a2a;
+    --noir25 : rgba(0, 0, 0, 0.25);
+    --blanc : #ffffff;
+    --blanc50 : rgba(255, 255, 255, 0.75);
+    /* polices */
+    --montserrat : 'Montserrat', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    min-height: 100vh;
+}
+/* accueil */
+.card img {
+    opacity: 25%;
+    max-height: 100px;
+    filter: drop-shadow(3px 3px 4px var(--bleu));
+}
+.accordion-flush .accordion-item:last-child {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+/* tables de gestions */
+.icones_table {
+    width: 30px;
+}
+.supprimer, .modifier, .afficher {
+    border-radius: 15px;
+}
+.supprimer:hover {
+    background-color: var(--rose);
+}
+.modifier:hover {
+    background-color: var(--jaune);
+}
+.afficher {
+    background-color: var(--vert);
+}
+.mignature_table {
+    width: 100px;
+    height: auto;
+}
+.input_dispo {
+    width: 50px;
+}
+.ajout_img {
+    background-color: var(--orange);
+}
+.portfolio_img img{
+    object-fit: cover;
+    opacity: 50%;
+}
+/* ------------------------------------ */
+/*     changement couleur à la main     */
+/* ------------------------------------ */
+.btn-primary, .btn-primary:disabled, .btn-primary:active, .btn-primary:focus {
+    background-color: var(--rose);
+    border-color: var(--rose);
+}
+.btn-primary:hover {
+    background-color: var(--rosepoudre);
+    border-color: var(--rosepoudre);
+    color: var(--rouge);
+}
+.btn-outline-primary:focus, .btn-primary:focus, .btn-primary:active:focus, .btn-outline-primary:active:focus {
+    box-shadow: 0 0 0 0.25rem var(--rose25);
+}
+.btn-outline-primary {
+    border-color: var(--rose);
+    color: var(--rose);
+}
+.btn-outline-primary:hover {
+    background-color: var(--rosepoudre);
+    border-color: var(--rosepoudre);
+    color: var(--rouge);
+}
+/* ------ */
+.btn-info, .btn-info:disabled, .btn-info:active, .btn-info:focus {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+.btn-info:hover {
+    background-color: var(--jaune);
+    border-color: var(--jaune);
+    color: var(--rouge);
+}
+.btn-outline-info:focus, .btn-info:focus, .btn-info:active:focus, .btn-outline-info:active:focus {
+    box-shadow: 0 0 0 0.25rem var(--rose25);
+}
+.btn-outline-info {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+.btn-outline-info:hover {
+    background-color: var(--jaune);
+    border-color: var(--jaune);
+    color: var(--rouge);
+}
+/* ------- */
+.border-primary {
+    border-color: var(--rose)!important;
+}
+.bg-dark {
+    background-color: var(--noir)!important;
+}
+.bg-light {
+    background-color: var(--blanc)!important;
+}
+.bg-primary {
+    background-color: var(--rose)!important;
+}
+.bg-secondary {
+    background-color: var(--orange)!important;
+}
+.bg-info {
+    background-color: var(--vert)!important;
+}
+.bg-danger {
+    background-color: var(--rouge)!important;
+}
+.table>:not(caption)>*>* {
+    background-color: var(--blanc);
+}
+.table-primary {
+    --bs-table-bg: var(--blanc);
+    --bs-table-striped-bg: var(--rose25);
+    --bs-table-striped-color: #000;
+    --bs-table-active-bg: var(--blanc);
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: var(--rose50);
+    --bs-table-hover-color: #000;
+    border-color: var(--rouge);
+}
+a {
+    color: var(--bleu);
+    font-size: 700;
+}
+a:hover {
+    color: var(--bleuciel);
+}
+th a::after {
+    content: ' ⏷';
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+@media print {
+    nav {
+        display: none;
+    }
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    body {
+        padding-top: 72px;
+        padding-bottom: 72px ;
+    }
+    .no-print {
+        display: none;
+    }
+    .table-primary {
+        --bs-table-bg: var(--blanc);
+        --bs-table-striped-bg: rgba(211, 211, 211, 0.5);
+        --bs-table-striped-color: #000;
+        --bs-table-active-bg: var(--blanc);
+        --bs-table-active-color: #000;
+        --bs-table-hover-bg: var(--rose50);
+        --bs-table-hover-color: #000;
+        border-color: var(--blanc);
+    }
+}
